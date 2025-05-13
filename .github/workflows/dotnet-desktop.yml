@@ -57,10 +57,13 @@ jobs:
     - name: Install .NET Core
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 7.0.x
 
     - name: Restore depenis
       run: dotnet restore 
+
+    - name: Build
+      run: dotnet build 
 
     # Execute all unit tests in the solution
     - name: Execute unit tests
